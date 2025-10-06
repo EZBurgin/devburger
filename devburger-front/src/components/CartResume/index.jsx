@@ -1,0 +1,72 @@
+import { toast } from 'react-toastify'
+import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+
+import { useCart } from '../../hooks/CartContext'
+import { api } from '../../services/api'
+import { formatPrice } from '../../utils/formatPrice'
+import * as S from './style'
+import { Button } from '../Button/index'
+
+export function CartResume() {
+
+    const navigate = useNavigate()
+
+    const [finalPrice, setFinalPrice] = useState(0)
+    const [deliveryTax] = useState(500)
+
+    const { cartProducts, clearCart } = useCart()
+
+    useEffect(() => {
+        const sumAllItems = cartProducts.reduce((acc, current) => {
+            return current.price * current.quantity + acc
+        }, 0)
+
+        setFinalPrice(sumAllItems)
+    }, [cartProducts])
+
+    const submitOrde = async () => {
+
+        const products = cartProducts.map((product) => {
+            return { id: product.id, quantity: product.quantity, price: product.price }
+        })
+
+        try {
+            const { data } = await api.post('/create-payment-intent', { products })
+
+            navigate('/checkout',
+                { state: data }
+            )
+        } catch (err) {
+            toast.error('Erro Tente Novamente!!', {
+                position: 'top-right',
+                autoclose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: 'dark'
+            })
+        }
+    }
+
+    return (
+        <div>
+            <S.Container>
+                <div className='container-top'>
+                    <h2 className='title'>Resumo do Pedido</h2>
+                    <p className='items'>Itens</p>
+                    <p className='items-price'>{formatPrice(finalPrice)}</p>
+                    <p className='delivery-tax'>Taxa de Entrega</p>
+                    <p className='delivery-tax-price'>{formatPrice(deliveryTax)}</p>
+                </div>
+                <div className='container-bottom'>
+                    <p>Total</p>
+                    <p>{formatPrice(finalPrice + deliveryTax)}</p>
+                </div>
+            </S.Container>
+            <Button onClick={submitOrde} >Finalizar Pedido</Button>
+        </div>
+    )
+}

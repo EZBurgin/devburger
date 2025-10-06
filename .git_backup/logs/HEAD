@@ -1,0 +1,11 @@
+0000000000000000000000000000000000000000 fbe47e4479544229f4841e26059c076f4f5721fe EZBurgin <eduardozanderburgin@gmail.com> 1753144636 -0300	clone: from https://github.com/EZBurgin/dev-burger.git
+fbe47e4479544229f4841e26059c076f4f5721fe 2fd63e6b7bae2bb7ac95e3d0f8d3fb891925e710 EZBurgin <eduardozanderburgin@gmail.com> 1753232389 -0300	commit: :airplane: Links entre páginas
+2fd63e6b7bae2bb7ac95e3d0f8d3fb891925e710 4e32d71327561d05d20dd349587e69c4b7d27a60 EZBurgin <eduardozanderburgin@gmail.com> 1753232635 -0300	commit: :bug: Resolvendo bugs
+4e32d71327561d05d20dd349587e69c4b7d27a60 6fd99b3c464b23987c415f71535e4e5c2675cf63 EZBurgin <eduardozanderburgin@gmail.com> 1753309258 -0300	commit: Alterações no visual e criação de componentes
+6fd99b3c464b23987c415f71535e4e5c2675cf63 efdddaaa35dd1a7ffa8d0c3a5d2ba145231685a8 EZBurgin <eduardozanderburgin@gmail.com> 1753714934 -0300	commit: :sparkles:Tela de Home
+efdddaaa35dd1a7ffa8d0c3a5d2ba145231685a8 283b7d52ab446467c312b90caadd6d99403d5e47 EZBurgin <eduardozanderburgin@gmail.com> 1754092304 -0300	commit: 🚸 Estilização Tela de Home
+283b7d52ab446467c312b90caadd6d99403d5e47 041ea1b5fad59d9344745586354fde7d499d7352 EZBurgin <eduardozanderburgin@gmail.com> 1754183630 -0300	commit: Criação do userContext
+041ea1b5fad59d9344745586354fde7d499d7352 984a8af28de006f8466f8133e9ee0853df7127f5 EZBurgin <eduardozanderburgin@gmail.com> 1754241590 -0300	commit: Criação do Header
+984a8af28de006f8466f8133e9ee0853df7127f5 d181b6759de34727b2c165aaca915d7c0493d7ed EZBurgin <eduardozanderburgin@gmail.com> 1754242107 -0300	commit: Footer
+d181b6759de34727b2c165aaca915d7c0493d7ed 6b2830c21861b939b5ee203b03224571cb5bb735 EZBurgin <eduardozanderburgin@gmail.com> 1754254157 -0300	commit: CartContext
+6b2830c21861b939b5ee203b03224571cb5bb735 e709396514af393d6a7e3dc450046628ec96dec3 EZBurgin <eduardozanderburgin@gmail.com> 1755729758 -0300	commit: Stripe
